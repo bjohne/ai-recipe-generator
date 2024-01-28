@@ -7,34 +7,40 @@
     <title>Recipe-Generator</title>
   </head>
   <body>
-    <header><h1>Welcome to the AI-Recipe-Generator</h1></header>
-    <main>
-      <form>
-        <input
-          type="text"
-          placeholder="Enter ingredients"
-          required
-          autofocus
-          autocomplete="off"
-        />
-        <input type="submit" />
-      </form>
+    <div class="container">
+      <header><h1>AI Recipe Generator</h1></header>
       <main>
-        <br />
-        <div>
-          Here comes you recipe <br /><br />
-          Ingredients: <br />-tomatoes <br />-basil, etc.
-        </div>
-        <br />
-      </main>
-    </main>
-    <footer>
-      This AI project was coded by Betina Johne and is
-      <a href="https://github.com/bjohne/ai-recipe-generator" target="_blank">
-        open-sourced</a
-      >
-      on Github.
-    </footer>
-    <script src="src/index.js"></script>
+        <form>
+          <input
+            type="text"
+            placeholder="Enter ingredients"
+            required
+            autofocus
+            autocomplete="off"
+            class="instructions"
+          />
+          <input type="submit" class="submit-button" />
+        </form>
+        <main>
+          <br />
+          <div class="recipe">
+            <div class="recipe-title">Here comes your recipe</div>
+            <br />
+            <div class="recipe-instructions">
+              Ingredients: <br />-tomatoes <br />-basil, etc.
+            </div>
+          </div>
+          <br />
+        </main>
+      
+      <footer>
+        This AI project was coded by Betina Johne and is
+        <a href="https://github.com/bjohne/ai-recipe-generator" target="_blank">
+          open-sourced</a
+        >
+        on Github.
+      </footer>
+      <script src="src/index.js"></script>
+    </div>
   </body>
 </html>
