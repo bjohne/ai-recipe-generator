@@ -6,12 +6,11 @@
 }
 
 body {
-  background-color: var(--background-color);
-
   background-image: url(/img/background2-img.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: black;
+  background-color: var(--background-color);
+  background-attachment: fixed;
 }
 
 .container {
@@ -19,7 +18,7 @@ body {
   max-width: 600px;
 }
 a {
-  color: var(--third-color);
+  color: var(--primary-color);
 }
 header {
   margin-bottom: 30px;
