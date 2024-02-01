@@ -15,19 +15,25 @@
         <h2>Find out how to make delicious dishes with them...</h2>
       </header>
       <main>
-        <form id="recipe-generator-form">
-          <input
-            type="text"
-            placeholder="Enter ingredients"
-            required
-            autofocus
-            autocomplete="off"
-            class="instructions"
-            id="user-ingredients"
-          />
-          <input type="submit" class="submit-button" />
-        </form>
-
+        <div class="form-container">
+          <form id="recipe-generator-form">
+            <input
+              type="text"
+              placeholder="Enter ingredients, i.e. tomato, basil, chili"
+              required
+              autofocus
+              autocomplete="off"
+              class="instructions"
+              id="user-ingredients"
+            />
+            <input type="submit" class="submit-button" />
+          </form>
+          <div class="hint">
+            Tip: if you want to use only your input vegetables, please start
+            with: only... <br />Else the recipe might list one or two more
+            vegetables.
+          </div>
+        </div>
         <br />
         <div class="recipe hidden" id="recipe">
           <span id="recipe-text"></span>
