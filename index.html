@@ -10,7 +10,10 @@
   </head>
   <body>
     <div class="container">
-      <header><h1>AI Recipe Generator</h1></header>
+      <header>
+        <h1>Any vegetable leftovers in your fridge?</h1>
+        <h2>Find out how to make delicious dishes with them...</h2>
+      </header>
       <main>
         <form id="recipe-generator-form">
           <input
@@ -24,16 +27,13 @@
           />
           <input type="submit" class="submit-button" />
         </form>
-        <main>
-          <br />
-          <div class="recipe" id="recipe" >
-            <div class="recipe-title">Here will show up your recipe...</div>
-            <br />
-           
-          </div>
-          <br />
-        </main>
-      
+
+        <br />
+        <div class="recipe hidden" id="recipe">
+          <span id="recipe-text"></span>
+        </div>
+      </main>
+
       <footer>
         This AI project was coded by Betina Johne and is
         <a href="https://github.com/bjohne/ai-recipe-generator" target="_blank">

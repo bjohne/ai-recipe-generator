@@ -13,23 +13,18 @@ function writeRecipe(response) {
 function generateRecipe(event) {
   event.preventDefault();
   let ingredientsInput = document.querySelector("#user-ingredients");
-  let prompt = `
-Please show me a recipe with the following ingredients ${ingredientsInput.value}, you may add two more main ingredients and also spices and herbs at your convenience. Please write it in basic HTML and begin directly with the dish's name, how many it serves, how long the preparation takes and follow with listing the ingredients. Then write how to prepare the dish.`;
+  let prompt = `Please show me a recipe with the following ingredients ${ingredientsInput.value}. You may add two more main ingredients and also spices and herbs at your convenience. If input begins with the word only, please do not add any more vegetables. Please write it in basic HTML and begin directly with the dish's name, how many it serves, how long the preparation takes and follow with listing the ingredients. Then write how to prepare the dish.`;
   let context =
-    "You are an experienced AI assistent for savoury cooking. You prefer a healthy cuisine if possible vegan and love recipes for tasty dishes with no more than 5 main ingredients. You ususally work with metric units.";
+    "You are an experienced AI assistent for savoury umami cooking. You prefer a healthy cuisine if possible vegan and love recipes for tasty dishes with no more than 5 main ingredients. You ususally work with metric units.";
   let apiKey = `31596ta47a643ofdbb992da3f1ed09dc`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   axios.get(apiUrl).then(writeRecipe);
 
-  new Typewriter("#recipe", {
-    strings: "Searching recipe with your ingredients...",
-    autoStart: true,
-    delay: 1,
-    cursor: "",
-  });
+  let recipeElement = document.querySelector("#recipe");
+  recipeElement.classList.remove("hidden");
 
-  console.log("Processing ingredients...");
+  recipeElement.innerHTML = `Searching recipe with ${ingredientsInput.value}...<span class="blink">⏳</span>`;
 }
 
 let recipeFormElement = document.querySelector("#recipe-generator-form");

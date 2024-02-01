@@ -1,4 +1,5 @@
 :root {
+  --header-color: #7f3e06;
   --primary-color: #cc8407;
   --secondary-color: #96bd40;
   --third-color: #363636;
@@ -6,7 +7,7 @@
 }
 
 body {
-  background-image: url(/img/background2-img.png);
+  background-image: url(/img/background-img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--background-color);
@@ -28,7 +29,7 @@ h1 {
   font-weight: 800;
   font-size: 36px;
   line-height: 1.5;
-  color: var(--primary-color);
+  color: var(--header-color);
 }
 form {
   padding: 30px;
@@ -37,6 +38,7 @@ form {
   display: flex;
   box-shadow: 0px 4px 30px rgba(39, 33, 66, 0.08);
 }
+
 .instructions {
   padding: 16px;
   border: 2px solid var(--secondary-color);
@@ -57,7 +59,9 @@ form {
   border-radius: 50px;
   padding: 14px 24px;
 }
-
+.hidden {
+  display: none;
+}
 .recipe {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -67,6 +71,20 @@ form {
   line-height: 2;
   border-left: 3px solid var(--secondary-color);
   box-shadow: 0px 4px 30px rgba(39, 33, 66, 0.08);
+}
+.blink {
+  animation: blink-animation 1.5s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1.5s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
 
 footer {
