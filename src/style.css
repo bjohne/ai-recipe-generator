@@ -1,5 +1,5 @@
 :root {
-  --header-color: #ffc92d;
+  --header-color: #f7a812;
   --primary-color: #cc8407;
   --secondary-color: #96bd40;
   --third-color: #363636;
@@ -28,14 +28,14 @@ header {
   background-color: var(--background-color);
   border-radius: 10px;
   padding: 5px 16px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 h1 {
   text-align: center;
   font-weight: 400;
   font-size: 32px;
   line-height: 1.5;
-  color: var(--primary-color);
+  color: var(--header-color);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -46,7 +46,7 @@ h2 {
   font-weight: 400;
   line-height: 1;
   font-size: 20px;
-  color: var(--primary-color);
+  color: var(--header-color);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   margin-top: 0px;
@@ -57,7 +57,7 @@ h2 {
   background-color: var(--background-color);
   border-radius: 10px;
   box-shadow: 0px 4px 30px rgba(39, 33, 66, 0.08);
-  opacity: 0.8;
+  opacity: 0.9;
 }
 form {
   display: flex;
@@ -101,7 +101,8 @@ form {
     "Lucida Sans", Arial, sans-serif;
   font-size: 15px;
   background-color: white;
-  opacity: 0.8;
+  opacity: 0.9;
+  color: var(--fourth-color);
   padding: 20px;
   line-height: 2;
   border-left: 3px solid var(--secondary-color);
