@@ -24,7 +24,7 @@ function generateRecipe(event) {
   let recipeElement = document.querySelector("#recipe");
   recipeElement.classList.remove("hidden");
 
-  recipeElement.innerHTML = `Searching recipe with ${ingredientsInput.value}...<span class="blink">⏳</span>`;
+  recipeElement.innerHTML = `Searching recipe for you with ${ingredientsInput.value}...<span class="blink">⏳</span>`;
 }
 
 let recipeFormElement = document.querySelector("#recipe-generator-form");
