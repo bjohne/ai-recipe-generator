@@ -135,10 +135,12 @@ form {
 }
 
 footer {
+  background-color: transparent;
   text-align: center;
   margin-top: 30px;
   font-size: 13px;
   color: var(--background-color);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+  opacity: 0.9;
 }
