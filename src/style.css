@@ -133,6 +133,16 @@ form {
     visibility: hidden;
   }
 }
+#copyButton {
+  background-color: var(--background-color);
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  color: var(--primary-color);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  opacity: 0.9;
+}
 
 footer {
   background-color: transparent;
