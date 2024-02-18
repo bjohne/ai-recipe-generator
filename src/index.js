@@ -30,7 +30,8 @@ function generateRecipe(event) {
 let recipeFormElement = document.querySelector("#recipe-generator-form");
 recipeFormElement.addEventListener("submit", generateRecipe);
 
-function copyRecipe() {
+function copyRecipe(event) {
+  event.preventDefault();
   let hiddenText = document.getElementById("recipe").innerText;
 
   let tempTextArea = document.createElement("textarea");
