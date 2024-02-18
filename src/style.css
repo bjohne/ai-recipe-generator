@@ -133,15 +133,26 @@ form {
     visibility: hidden;
   }
 }
+.copyButton {
+  display: flex;
+  justify-content: center;
+}
 #copyButton {
   background-color: var(--background-color);
   text-align: center;
-  margin-top: 30px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  border-color: var(--fourth-color);
+  margin-top: 20px;
   font-size: 13px;
-  color: var(--primary-color);
+  color: var(--fourth-color);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   opacity: 0.9;
+}
+#copyButton:hover {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 footer {

@@ -30,15 +30,13 @@ function generateRecipe(event) {
 let recipeFormElement = document.querySelector("#recipe-generator-form");
 recipeFormElement.addEventListener("submit", generateRecipe);
 
-document.getElementById("copyButton").addEventListener("click", function () {
-  // Get the hidden text content
+function copyRecipe() {
   let hiddenText = document.getElementById("recipe").innerText;
 
-  // Create a temporary textarea element to copy the text
   let tempTextArea = document.createElement("textarea");
   tempTextArea.value = hiddenText;
+  console.log(hiddenText);
 
-  // Append the textarea to the document
   document.body.appendChild(tempTextArea);
 
   // Select the text in the textarea
@@ -48,8 +46,9 @@ document.getElementById("copyButton").addEventListener("click", function () {
   // Copy the selected text to the clipboard
   document.execCommand("copy");
 
-  // Remove the temporary textarea
   document.body.removeChild(tempTextArea);
+}
 
-  alert("Text copied to clipboard!");
-});
+let copyButton = document.querySelector("#copyButton");
+
+copyButton.addEventListener("click", copyRecipe);
