@@ -13,7 +13,7 @@ function writeRecipe(response) {
 function generateRecipe(event) {
   event.preventDefault();
   let ingredientsInput = document.querySelector("#user-ingredients");
-  let prompt = `Please show me a recipe with the following ingredients ${ingredientsInput.value}. You may add spices, herbs, plantbased proteins and dried ingredients at your convenience. Please write it in basic HTML and begin directly with the dish's name, how many it serves, how long the preparation takes and follow with listing the ingredients. Then write how to prepare the dish.`;
+  let prompt = `Please show me a recipe with the following ingredients ${ingredientsInput.value}. You may add spices, herbs, plantbased proteins and dried ingredients at your convenience. Please write it in basic HTML and begin directly with the dish's name, how many it serves, how long the preparation takes and follow with listing the ingredients. Then write how to prepare the dish. If you do not find a recipe, please write it also.`;
   let context =
     "You are an experienced AI assistent for nutritious umami cooking. You prefer a healthy cuisine if possible vegan. You work with metric units.";
   let apiKey = `31596ta47a643ofdbb992da3f1ed09dc`;
